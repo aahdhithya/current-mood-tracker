@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>current mood-tracker</title>
+
+        <!--link css-->
+        <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+             <div class="cat"></div>
+            <div class="container">
+            <h1> Hiii! How are you feeling right now? 🎀</h1>
+            <!--buttons-->
+            <div class="buttons">
+                <button data-mood="happy" title="happy"> <img src="happy.png" width="70px" alt="happy"> </button>
+                <button data-mood="sad" title="sad"> <img src="sad.png" width="70px" alt="sad"> </button>
+                <button data-mood="mad" title="mad"> <img src="mad.png" width="70px" alt="mad"> </button>
+                <button data-mood="excited" title="excited"> <img src="excited.png" width="70px" alt="excited"> </button>
+                <button data-mood="scared" title="scared"> <img src="scared.png" width="70px" alt="scared"> </button>
+                <button data-mood="lovely" title="lovely"> <img src="lovely.png" width="70px" alt="lovely"> </button>
+            </div>
+
+            <!--JS-->
+            <p id="message"> </p>
+            <ul id="log"></ul>
+             </div>
+             
+            <!--link JS-->
+            <script src="script.js"></script>
+        </body>
+    </html>

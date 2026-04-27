@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.container {
+background: white;
+padding: 40px;
+border-radius: 40px;
+width: 450px;
+text-align: center;
+position: relative;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: medium;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between; /* spread btns evenly across the container */
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 10px; /* space inside the button */
+    border: none;
+    border-radius: 10px; /* rounded corners */
+    cursor: pointer; /* changes cursor to pointer on hover */
+    background: #f5d5e2;
+    transition: all 0.3s ease; /* for smooth hover effect */
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #000000;
+}
+
+#message {
+    font-size: medium;
+    margin-bottom: 20px;
+    color: black;
+    min-height: 20px;
+}
+
+#log {
+    list-style: none; 
+    max-height: 150px; /* log won't expand more than 150px*/
+    overflow-y: auto; /* if content is over 150px shows a scroll bar automatically */
+    text-align: left;
+    padding: 0; 
+}
+
+#log li {
+    background: #f7f7f7;
+    padding: 8px 12px; /* space b/n top and bottom */
+    border-radius: 8px; /*rounded corners */
+    margin-bottom: 5px; /* space b/n log items */
+    font-size: 13px;
+    text-align: left;
+    word-break: break-word; /* to break to new line if the line is too long */
+}
+
+.cat {
+    width: 128px;
+    height: 128px;
+    background-image: url('cat1.png');
+    background-color: white;
+    background-size: contain; /* contain - to fix inside the box w/o cropping */
+    background-repeat: no-repeat;
+    image-rendering: pixelated; /*to keep pixel art crispy clear*/
+    display: block;
+    margin: 0 auto -20px auto;
+    position: relative;
+    z-index: 10; /* to make the cat appear infront of everything */
+    animation: catAnim 0.8s steps(1) infinite,
+               bob 3s ease-in-out infinite alternate;
+
+}
+/*like a flip book, switching b/n images */
+@keyframes catAnim {
+    0%   { background-image: url('cat1.png'); } /* show cat 1*/
+    50%  { background-image: url('cat2.png'); } /*switch to cat 2 */
+    100% { background-image: url('cat1.png'); } /* switch back to cat 1 */
+}
+/* to move up and  down*/
+@keyframes bob {
+    0%   { transform: translateY(0px); }
+    100% { transform: translateY(-5px); }
+}
