@@ -105,3 +105,20 @@ button:hover {
     0%   { transform: translateY(0px); }
     100% { transform: translateY(-5px); }
 }
+
+.clouds {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* to hide any part of clouds that goes outside the container */
+    pointer-events: none;
+    z-index: 0; /* to place clouds behind the cat and container */
+}
+
+.cloud {
+    position: absolute;
+    image-rendering: pixelated;
+    animation: bobCloud ease-in-out linear infinite;
+}
